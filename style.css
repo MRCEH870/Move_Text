@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    background: #000;
+}
+p{
+    display: inline-block;
+    font-size: 140px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    color: transparent;
+    background: linear-gradient(to right,#8a2387,#e94057,#f27121);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+@keyframes jump_word{
+    0%{
+        transform: translate(0,0) rotate(180deg);
+    }
+    25%{
+        transform: translate(0,-150px) scale(2);
+    }
+    75%{
+        transform: translate(0,200px);
+    }
+    100%{
+        transform: translate(0,0) rotate(360deg);
+    }
+}
+p.active{
+    animation: jump_word 3s ease-in-out;
+    transform-origin: bottom right;
+}
